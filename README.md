@@ -29,6 +29,7 @@ Example files are included in this repository so you can try them.
 After cloning the project from this repository, run the following commands:
 
 > cd bowling
+
 > mvn clean compile
 
 This command generates the jar file **bowling-0.0.1-SNAPSHOT.jar** to **/bowling/target** folder.
