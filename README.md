@@ -30,9 +30,10 @@ After cloning the project from this repository, run the following commands:
 
 > cd bowling
 
-> mvn clean compile
+> mvn clean package
 
 This command generates the jar file **bowling-0.0.1-SNAPSHOT.jar** to **/bowling/target** folder.
+This command also runs Unit Tests as part of Maven Lifecycle.
 
 ## Unit Testing Execution
 
@@ -43,4 +44,8 @@ This command generates the jar file **bowling-0.0.1-SNAPSHOT.jar** to **/bowling
 >mvn verify
 
 This command will execute the maven lifecycle up to verify, which includes compilation, unit testing and integration testing
+
+## Execution after compiling
+You can move the generated jar file **bowling-0.0.1-SNAPSHOT.jar** from **/bowling/target** to any folder, and after that, copy the text file you want to try to the same location. Then run
+> java -jar bowling-0.0.1-SNAPSHOT.jar gameFile.txt
 
