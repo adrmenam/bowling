@@ -22,15 +22,15 @@ public class BowlingMatch implements Game {
 	@Override
 	public void play(String filePath) throws NotAllowedRoll, NumberFormatException {
 		// TODO Auto-generated method stub
-		String fileName = filePath;
+		
 		List<String> attempts = new ArrayList<>();
 
-		try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
+		try (Stream<String> stream = Files.lines(Paths.get(filePath))) {
 
 			attempts = stream.collect(Collectors.toList());
 
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("File with name: "+filePath+" does not exist.");
 		}
 
 		for (String attempt : attempts) {
